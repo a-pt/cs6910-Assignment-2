@@ -38,11 +38,31 @@ The implementation is linked with wandb and hyper parameter tuning can be done e
 Part B
 -
 We have implemented a code that performs Fine Tuning on a pre-trained model. We have loaded the some models which are pre-trained on ImageNet dataset, we have used ImageNet dataset as it is somehow similar to iNaturalist Dataset<br/><br/>
-We have also used the following as the hyperparameters.<br/><br/>
+We have also used the following functionalities while training.<br/><br/>
 ```
 Pre-Trained Model        :Inception,Resnet,Inceptionresnet,Xception
 Optimizers               :Adam,Stochastic
 Activation Fucntions     :ReLu,Tanh
+```
+We have also used the following as the hyperparameters.<br/><br/>
+*K_ft : the layer number from which convolution starts unfreezing for fine tuning.<br/><br/>
+*Ft_bool : If set Yes, that means we have to do fine tuning.<br/><br/>
+*In_epochs : No of epochs to run with pre trained model.<br/><br/>
+*Ft_epoch : No. of epochs to run after unfreezing of layers to fine tune them.<br/><br/>
+*preprocess_input : to adequate the input to the format the model requires.<br/><br/>
+*Global Average Pooling : An operation that calculates the average output of each feature map in the previous layer. This fairly simple operation reduces the data significantly and prepares the model for the final classification layer. It also has no trainable parameters, just like Max Pooling.<br/><br/>
+
+Here too at dense layer we have used "softmax" as the activation function.<br/><br/>
+Similar to  Part A, here the implementation is linked with wandb and hyper parameter tuning can be done effectively by changing the values of sweep confiiguration in the script. The configuration used for parameter searching are as follows.<br/><br/>
+```
+'base': ['inception','resnet','inceptionresnet','xception']
+'in_epoch': [4]
+'ft_epoch': [4]
+'ft_bool': ['Yes']
+'dropout': [0.1,0.2]
+'optimizer_fn': ['adam','sgd']
+'activation_fn': ['relu','tanh']
+'dense': [256,512]
 ```
 
 
