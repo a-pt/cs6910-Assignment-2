@@ -2,7 +2,7 @@
 
 Part A
 -
-We have implemented a code that implements Convolutional Neural Network on a subset of iNaturalist dataset with the following functionalities.
+We have implemented a code that implements Convolutional Neural Network on a subset of iNaturalist dataset with the following functionalities..<br/><br/>
 ```
 Optimizers               :Stochastic,Momentum,Adam
 Activation Fucntions     :ReLu, Tanh
@@ -10,18 +10,17 @@ Initialization           :Random
 Number of Filters        :16, 32
 Stride values            :1, 2
 ```
--
-We have also used the following as the hyperparameters.
+We have also used the following as the hyperparameters..<br/><br/>
 
-*Dropout*                 :The Dropout layer randomly sets input units to 0 with a frequency of rate at each step during training time, which helps prevent overfitting
+*Dropout*                 :The Dropout layer randomly sets input units to 0 with a frequency of rate at each step during training time, which helps prevent overfitting.<br/><br/>
 *Batch Normalization*     :Batch normalization significantly reduces training time by normalizing the input of each layer in the network. In practical coding, we add Batch   
-                           Normalization after the activation function of the output layer or before the activation function of the input layer. 
-*Filter Organization*     :It will organize the number of filters in each layer of CNN.
-*Data Augmentation*       :It is a technique to artificially create new training data from existing training data.
+                           Normalization after the activation function of the output layer or before the activation function of the input layer. .<br/><br/>
+*Filter Organization*     :It will organize the number of filters in each layer of CNN..<br/><br/>
+*Data Augmentation*       :It is a technique to artificially create new training data from existing training data..<br/><br/>
 
-At dense layer we have used "softmax" as the activation function.
+At dense layer we have used "softmax" as the activation function..<br/><br/>
 
-The implementation is linked with wandb and hyper parameter tuning can be done effectively by changing the values of sweep confiiguration in the script. The configuration used for parameter searching are as follows.
+The implementation is linked with wandb and hyper parameter tuning can be done effectively by changing the values of sweep confiiguration in the script. The configuration used for parameter searching are as follows..<br/><br/>
 ```
 'epoch': [5,7,8,10]
 'dropout': [0.1,0.2,0.3]
