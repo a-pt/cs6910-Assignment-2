@@ -1,7 +1,8 @@
 # CS6910-Assignment-2 [CS20M005, CS20M016]
 
-Part A we have implemented a code that implements Convolutional Neural Network on a subset of iNaturalist dataset with the following functionalities.
+Part A
 -
+We have implemented a code that implements Convolutional Neural Network on a subset of iNaturalist dataset with the following functionalities.
 ```
 Optimizers               :Stochastic,Momentum,Adam
 Activation Fucntions     :ReLu, Tanh
@@ -9,8 +10,8 @@ Initialization           :Random
 Number of Filters        :16, 32
 Stride values            :1, 2
 ```
-We have also used the following as the hyperparameters.
 -
+We have also used the following as the hyperparameters.
 
 *Dropout*                 :The Dropout layer randomly sets input units to 0 with a frequency of rate at each step during training time, which helps prevent overfitting
 *Batch Normalization*     :Batch normalization significantly reduces training time by normalizing the input of each layer in the network. In practical coding, we add Batch   
