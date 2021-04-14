@@ -68,4 +68,4 @@ Similar to  Part A, here the implementation is linked with wandb and hyper param
 
 Part C
 -
-
+We have used a pre-trained model named as YoloV3 in this part for object detection in an image as well as in a video.<br/><br/>
