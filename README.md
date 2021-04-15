@@ -34,6 +34,9 @@ The implementation is linked with wandb and hyper parameter tuning can be done e
 'dense': [128,256,512]
 'stride': [1,2]
 ```
+Q1&Q2.iypnb implements a CNN from scratch and find best hyperparameters using wanbd sweeps.
+Q4&Q5.iypng Visualises the best model detected using guided backpropogation, Grad-CAM and guided Grad-CAM
+
 
 Part B
 -
@@ -64,8 +67,11 @@ Similar to  Part A, here the implementation is linked with wandb and hyper param
 'activation_fn': ['relu','tanh']
 'dense': [256,512]
 ```
-
+Q1-3.iypnb implements wandb sweeps to findout best hyper parametes for pre trained model and do fine tuning based on those.
 
 Part C
 -
 We have used a pre-trained model named as YoloV3 in this part for object detection in an image as well as in a video.<br/><br/>
+od_image.iypnb implements object detection from images.
+Object_Detection_in_Video_.ipynb implements object detection from videos.
+hd_video.py implements real time human detection using YoloV3 and OpenCV
