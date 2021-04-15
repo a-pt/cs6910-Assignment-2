@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import imutils
 import time
-import cv2
+import cv2,os
 
 classes=[]
 fileptr = open('coco.names', 'r')
