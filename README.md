@@ -59,8 +59,8 @@ Here too at dense layer we have used "softmax" as the activation function.<br/><
 Similar to  Part A, here the implementation is linked with wandb and hyper parameter tuning can be done effectively by changing the values of sweep confiiguration in the script. The configuration used for parameter searching are as follows.<br/><br/>
 ```
 'base': ['inception','resnet','inceptionresnet','xception']
-'in_epoch': [4]
-'ft_epoch': [4]
+'in_epoch': [4,5,10]
+'ft_epoch': [4,5,10]
 'ft_bool': ['Yes']
 'dropout': [0.1,0.2]
 'optimizer_fn': ['adam','sgd']
